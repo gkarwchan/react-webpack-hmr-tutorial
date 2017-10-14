@@ -1,0 +1,31 @@
+{
+  "name": "react-webpack-hmr-tutorial",
+  "version": "1.0.0",
+  "description": "React and Webpack HMR tutorial from A to Z",
+  "main": "index.js",
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "style-loader": "^0.19.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack": "^3.7.1",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-hot-middleware": "^2.19.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkarwchan/react-webpack-hmr-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gkarwchan/react-webpack-hmr-tutorial/issues"
+  },
+  "homepage": "https://github.com/gkarwchan/react-webpack-hmr-tutorial#readme"
+}
