@@ -1,8 +1,10 @@
 # Lesson 1:
----
+
+## Autoload vs.HMR
 
 ## Description: 
-Before we describe HMR option in webpack, it worth mentioning the `hot` option in webpack-dev-server.  
+Before we describe HMR option in webpack, it worth mentioning that webpack-dev-server provides auto-reloading feature out-of-shelf, and by default without any configuration.  
+Auto-reloading is different from HMR, that auto-reloading will reload the whole application (HTML, JS, CSS) files all together , where HMR will modify only the changed part by replacing the code in memory.  
 webpack-dev-server provides the `hot` option, which reload the whole application whenever anything change.  
 This simple application will do the following:  
 
@@ -12,7 +14,7 @@ This simple application will do the following:
 
 The lesson describe the simplest usage of webpack to bundle a javascript file from two files (index.js and print.js), and webpack-dev-server to server the result.
 
-## How Hot option works?
+## How auto-reload option works?
 Webpack-dev-server monitor the entry code and rebuild and reload the whole bundle whenever any change occurs.  
 We don't have to do anything because  webpack-dev-server will do that by default.
 
@@ -32,7 +34,8 @@ And webpack-dev-server will monitor all files associated with the entry point an
 ## Test it:
 run 
 ```bash
-npm run build
+npm install
+# you don't need npm run build, becasue npm start will do it
 npm start
 ```
 
