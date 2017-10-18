@@ -1,3 +1,3 @@
 export default function printMe() {
-    console.log('I get called from someone');
+    console.log('I get called from webpage');
   }
