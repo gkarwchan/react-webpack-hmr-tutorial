@@ -16,9 +16,5 @@ const render = Component => {
 render(Root)
 
 if (module.hot) {
-  
-  module.hot.accept('./containers/Root', () => { 
-    let root = require('./containers/Root').default;
-    render(root);
-  });
+  module.hot.accept('./containers/Root', () => {render(Root)});
 }

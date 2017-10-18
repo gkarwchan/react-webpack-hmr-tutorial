@@ -32,10 +32,17 @@ Add a wrapper around root application from react-hot-loader like this:
       <Component />
     </AppContainer>,
 ```
+And we add HMR API
 
-We don't need to add any HMR API here, why?  
-Because style-loader and css-loader are HMR enabled.
-
+```javascript
+if (module.hot) {
+  
+  module.hot.accept('./containers/Root', () => { 
+    let root = require('./containers/Root').default;
+    render(root);
+  });
+}
+```
 
 #### .babelrc
 In babel compiler we add react-hot-loader plugin like this:
@@ -48,10 +55,26 @@ In babel compiler we add react-hot-loader plugin like this:
 run 
 ```bash
 npm install
-# you don't need npm run build, becasue npm start will do it
-npm run server
+npm start
 ```
 
+#### another alternative
+
+We can simplify the hot module code that we are using by doing two things:  
+
+in the file: `.babelrc` change the preset `env` to disable modules:  
+
+```javascript
+"presets": [ ["env", {"modules" : false}], "react"],
+```
+
+and then do the following code in `src/index.js`:  
+
+```javascript
+if (module.hot) {
+  module.hot.accept('./containers/Root', () => {render(Root)});
+}
+```
 
 ## Conclusion:
 
