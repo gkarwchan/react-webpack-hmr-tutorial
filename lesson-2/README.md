@@ -29,6 +29,23 @@ devServer: {
 ```
 And webpack-dev-server will monitor all files associated with the entry point and rebuild and reload the whole bundle.
 
+
+#### src/index.js
+Doing the above will refresh the whole application.  
+In order to refresh only the changed part, the client has to handle a handler for the HMR, by using HMR API's `module.hot`.
+
+```javascript
+if (module.hot) {
+    module.hot.accept('./print.js', function() {
+      console.log('print changessss');
+      document.body.removeChild(element);
+      element = component(); // Re-render the "component" to update the click handler
+      document.body.appendChild(element);
+    })
+  }
+
+```
+
 ## Test it:
 run 
 ```bash
@@ -49,6 +66,30 @@ The moment you save you will see the follwoing in the Network tab in dev tools:
 ![webpack-dev-server-hmr](images/webpack-dev-server-hmr-2.png)
 
 As you see the web browser didn't load the whole application, but just two small bundles (less than 600 bytes).
+
+## Worth mentioning
+webpack when generate modules, it uses auto-generated numbers to identify modules.  
+If you want to use the correct module name, then look at this plugin: `NamedModulesPlugin` like this:
+
+```javascript
+{
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+  ],
+}
+```
+or you can set webpack config `output.pathInfo` option:
+
+```javascript
+{
+  output: {
+    ....
+    pathInfo: true
+  }
+}
+```
+
+
 ## Conclusion:
 
 webpack-dev-server provides out-of-box HMR reloading for the application.

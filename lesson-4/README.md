@@ -39,6 +39,7 @@ plugins: [
         new webpack.HotModuleReplacementPlugin()
     ]
 ```
+`HotModuleReplacementPlugin` will tell webpack to provides hot updates to the server.  
 
 And we add another entry point in the entry files:
 
