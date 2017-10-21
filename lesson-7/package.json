@@ -1,10 +1,10 @@
 {
-  "name": "lesson-6",
+  "name": "lesson-7s",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --history-api-fallback --open",
     "build": "webpack"
   },
   "keywords": [],
@@ -18,7 +18,8 @@
     "babel-preset-react": "^6.24.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-hot-loader": "^3.1.1",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^2.9.2"
   }
 }
