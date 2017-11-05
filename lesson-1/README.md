@@ -1,28 +1,39 @@
-# Lesson 1:
+# 1: The life without HMR
 
-## Autoload vs.HMR
+## What we will cover: 
+Before we learn HMR let's see what kind of problems it fixes by looking at the development experience without it.  
 
-## Description: 
-Before we describe HMR option in webpack, it worth mentioning that webpack-dev-server provides auto-reloading feature out-of-shelf, and by default without any configuration.  
-Auto-reloading is different from HMR, that auto-reloading will reload the whole application (HTML, JS, CSS) files all together , where HMR will modify only the changed part by replacing the code in memory.  
-webpack-dev-server provides the `hot` option, which reload the whole application whenever anything change.  
-This simple application will do the following:  
+The lesson describe the simplest usage of webpack:
 
-1. Simple JS bundling of two files, and one third-party library.
-2. webpack-dev-server as a server to show hot reloading (again Not `HMR`).
+1. One JavaScript module that requires anther JS module, which in trun requires a third party library.  
+2. webpack-dev-server with watch or hot modewebpack.
 
+P.S: watch mode is not the same as `HMR`, and just continue to next section to see the difference.
 
-The lesson describe the simplest usage of webpack to bundle a javascript file from two files (index.js and print.js), and webpack-dev-server to server the result.
+## Technical Background:
+Webpack provides `watch mode` feature, which runs a process that will watch any changes in your input codes, and rebundle them on the fly.  
+And if you use Webpack-dev-server as your web developement server for your SPA (Single Page Application), then it watches and auto-reload your compile code, and refresh your browser just when you save your code, without you refreshing the browser.  
+But this watching feature is different than Webpack-dev-server 's HMR, because auto-reloading will reload the whole application (HTML, JS, CSS) files all together , where HMR will modify only the changed part by replacing the code in memory.  
+So, if the build process takes one minute, then every time you save your code, it will take a whole minute to do the whole build and reload the whole application again. Adding to that, if you are in the middle of testing, then all the testing steps are lost, and you are from the start of your application again.
 
-## How auto-reload option works?
-Webpack-dev-server monitor the entry code and rebuild and reload the whole bundle whenever any change occurs.  
-We don't have to do anything because  webpack-dev-server will do that by default.
-
-### Going through the code:
+## Going through the code:
 ***
 
+#### index.js file:
+---
+The index file requires another file (print.js) and a third party library (lodash).
+
 #### webpack.config.js
-Just simply specify the directory from where the webpack will server the web application:
+---
+The entry point is 
+```javascript
+    entry: './src/index.js', // input file
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist') // output into folder: dist
+    },
+```
+and we configure webpack-dev-server by simply specify the directory from where the webpack will server the web application:
 
 ```javascript
 devServer: {
@@ -48,4 +59,4 @@ Notice on Chrome Developer tool's Network tab, that any time you change `print.j
 
 ## Conclusion:
 
-webpack-dev-server provides out-of-box hot reloading for the whole application without any changes, or even configuration.
+webpack-dev-server provides out-of-box watch mode for the whole application without any changes, or even configuration, but it will load the whole application again.

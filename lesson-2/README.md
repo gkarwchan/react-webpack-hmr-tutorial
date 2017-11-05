@@ -1,6 +1,4 @@
-# Lesson 2:
-
-## Off-the-shelf Webpack-dev-server's HMR
+# 2: Off-the-shelf Webpack-dev-server's HMR
 
 ## Description: 
 webpack-dev-server provides off-the-shelf HMR feature. All what we have to do is to add the option `hot` when we configure webpack-dev-server:  
