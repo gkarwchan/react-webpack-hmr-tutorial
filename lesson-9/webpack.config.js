@@ -7,7 +7,7 @@ module.exports = {
         contentBase: './dist'
     },
     devtool: 'inline-source-map',
-    entry: ['./src/index.js'],
+    entry: ['./src/client/index.jsx'],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -15,7 +15,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
             }
