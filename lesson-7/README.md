@@ -1,10 +1,9 @@
-# Lesson 4:
+# Lesson 7:
 
-## HMR for React with webpack-dev-server
+## React-Hot-Loader and Component's State:
 
 ## Description: 
-Let us start with React, and for simplicity we will start with webpack-dev-server
-
+We will use React-Hot-Loader 
 ### Going through the code:
 ***
 

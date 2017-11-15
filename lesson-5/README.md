@@ -1,4 +1,4 @@
-# Lesson 4:
+# Lesson 5:
 
 ## Using HMR with CSS and other assets
 
