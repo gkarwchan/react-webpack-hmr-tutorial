@@ -1,6 +1,6 @@
 # Lesson 3:
 
-## Buidling webpack inside NodeJS application
+## Rebuild webpack in a full stack applicaation
 
 ## Description: 
 If we are building a full-stack application, then we don't have the luxury to use webpack-dev-server, so we have to depend on ourselves to build this HMR features.  

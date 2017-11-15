@@ -3,7 +3,7 @@
 ## What we will cover: 
 Before we learn HMR let's see what kind of problems it fixes by looking at the development experience without it.  
 
-The lesson describe the simplest usage of webpack:
+This lesson has very simple code that shows a simple bundling for JavaScript. It is a simple code that has the following:  
 
 1. One JavaScript module that requires anther JS module, which in trun requires a third party library.  
 2. webpack-dev-server with watch or hot modewebpack.
