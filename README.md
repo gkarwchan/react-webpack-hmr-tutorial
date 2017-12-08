@@ -35,4 +35,7 @@ The lessons are as follows:
 8. Redux and HMR:
     We are going to use Redux and see how we hot reload the store with HMR.
 
-To come in the near future: Isomorphic React
+
+Still to come in the future:  
+
+**HMR for Isomorphic React**
