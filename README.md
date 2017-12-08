@@ -5,11 +5,9 @@
 
 HMR is not an easy subject, and might be tricky specially if we want to do it in isomorphic (or universal) application.  
 
-I didn't find a tutorial that combines all stages of HMR, and step-by-step guide.  
+I didn't find a tutorial that explain HMR in a step-by-step way, so I created this tutorial hoping will help the community.  
 
-I created this tutorial hoping will help the community.  
-
-It is an HMR tutorial from A to Z, including React, and Isomorphic React.  
+It is an HMR tutorial from A to Z, including React, and working on Isomorphic React.  
 
 The lessons are as follows:
 
@@ -37,3 +35,4 @@ The lessons are as follows:
 8. Redux and HMR:
     We are going to use Redux and see how we hot reload the store with HMR.
 
+To come in the near future: Isomorphic React

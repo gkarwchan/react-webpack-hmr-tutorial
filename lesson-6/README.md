@@ -48,7 +48,19 @@ npm install
 npm run server
 ```
 Open the page and press the button to increment the counter.  
-Then modify the counter.js page, and save, and watch the page will be reloaded and the state will be lost.
+Then modify the src/containers/Counter.js where you change the increment to add 10 as follows:
+
+```javascript
+increment() {
+    this.setState({counter: this.state.counter + 10});
+  }
+
+  decrement() {
+    this.setState({counter: this.state.counter - 10});
+  }
+```
+
+Now, save, and press the increment button, and you will see that the current state (counter) will be reset to its starting point (3).
 
 ## Conclusion:
 

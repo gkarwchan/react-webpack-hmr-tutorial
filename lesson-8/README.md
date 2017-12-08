@@ -46,4 +46,10 @@ run
 npm install
 npm start
 ```
+Push the increment button on the web page to change the counter value.  
+Change the step value in the reducer code in the file: src/reducers/index.js and save .  
+You will see that the counter state was preserved.
 
+## Conclusion:
+
+When we use HMR's API to hot reload Redux's reducers, it will reload the new code while preserving the old state.

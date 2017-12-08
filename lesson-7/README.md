@@ -56,26 +56,21 @@ run
 npm install
 npm start
 ```
-
-#### another alternative
-
-We can simplify the hot module code that we are using by doing two things:  
-
-in the file: `.babelrc` change the preset `env` to disable modules:  
+Open the page and press the button to increment the counter.  
+Then modify the src/containers/Counter.js where you change the increment to add 10 as follows:
 
 ```javascript
-"presets": [ ["env", {"modules" : false}], "react"],
+increment() {
+    this.setState({counter: this.state.counter + 10});
+  }
+
+  decrement() {
+    this.setState({counter: this.state.counter - 10});
+  }
 ```
 
-and then do the following code in `src/index.js`:  
-
-```javascript
-if (module.hot) {
-  module.hot.accept('./containers/Root', () => {render(Root)});
-}
-```
+Now, save, and press the increment button, and you will see that the old state (counter) was saved and the code is incrementing by 10, from the old state.
 
 ## Conclusion:
 
-All assets processors: css, image, fonts are HMR enabled, so we don't want to do anything to wire them.
-
+React-hot-loader will save the component state during HMR reload.
