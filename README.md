@@ -19,14 +19,21 @@ The lessons are as follows:
 2. Off-the-shelf Webpack-dev-server's HMR:
     Describes how to do HMR with out-of-box webpack-dev-server.  
 
-3. Rebuild webpack in a full stack applicaation:
+3. Rebuild client code using webpack in a full stack application:
     Describes how to get webpack rebuild without webpack-dev-server and from inside a NodeJS application.
 
-4. Using HMR in full-stack application:
+4. Using HMR for server and client in a full-stack application:
     Describes how to get HMR without webpack-dev-server and from inside a NodeJS application.
 
 5. Using HMR with CSS and other assets:
     Describes how to use webpack and HMR with other resources like css, fonts, ...etc.
 
-6. 
+6. React and the State problem:
+    When using HMR with React, you can hot load changes on UI, but you loose the changes on the state. This example to explain how?
+
+7. React-Hot-Loader to fix HMR for the React Component State:
+    When using HMR with React, you can hot load changes on UI, but you loose the changes on the state. This example to explain how?
+
+8. Redux and HMR:
+    We are going to use Redux and see how we hot reload the store with HMR.
 

@@ -1,6 +1,6 @@
 # Lesson 4:
 
-## Using HMR in full-stack application
+## Using HMR for server and client in a full-stack application
 
 ## Description: 
 after we found out how to use [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) in a node application, let us move on and see how to implement HMR in a full-stack application.  

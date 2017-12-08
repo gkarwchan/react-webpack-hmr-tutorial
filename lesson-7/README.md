@@ -1,9 +1,9 @@
 # Lesson 7:
 
-## React-Hot-Loader and Component's State:
+## React-Hot-Loader and Component State:
 
 ## Description: 
-We will use React-Hot-Loader 
+We will use React-Hot-Loader to hot reload component state
 ### Going through the code:
 ***
 

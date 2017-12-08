@@ -1,6 +1,6 @@
 # Lesson 3:
 
-## Rebuild webpack in a full stack applicaation
+## Rebuild client code using webpack in a full stack application
 
 ## Description: 
 If we are building a full-stack application, then we don't have the luxury to use webpack-dev-server, so we have to depend on ourselves to build this HMR features.  
